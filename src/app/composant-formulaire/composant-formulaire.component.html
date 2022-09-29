@@ -1,52 +1,52 @@
 <body>
     <div class="formulaire col-md-6 mx-auto">
-        <form id="form">
+        <form (ngSubmit)="onSubmitForm(form)"  #form="ngForm">
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input type="text" class="form-control" id="nom" placeholder="Dupont" required>
+                <input [(ngModel)]="nom" name="nom" type="text" class="form-control" id="nom" placeholder="Dupont" required>
             </div>
             <div class="form-group">
                 <label for="prenom">Votre prénom</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Jean" required>
+                <input [(ngModel)]="prenom" name="prenom" type="text" class="form-control" id="prenom" name="prenom" placeholder="Jean" required>
             </div>
             <div class="form-group">
                 <label for="adresse">Votre adresse</label>
-                <input type="text" class="form-control" id="adresse" name="adresse" placeholder="8 rue de la Fonderie" required>
+                <input [(ngModel)]="adresse" name="adresse" type="text" class="form-control" id="adresse" name="adresse" placeholder="8 rue de la Fonderie" required>
             </div>
             <div class="form-group">
-                <label for="nom">Votre code postal</label>
-                <input type="text" class="form-control" id="codepostal" name="codepostal" placeholder="67000" maxlength="5" pattern="[0-9]+" required>
+                <label for="codepostal">Votre code postal</label>
+                <input [(ngModel)]="codepostal" name="cp" type="text" class="form-control" id="codepostal" name="codepostal" placeholder="67000" maxlength="5" pattern="[0-9]+" required>
             </div>
             <div class="form-group">
                 <label for="ville">Votre ville</label>
-                <input type="text" class="form-control" id="ville" name="ville" placeholder="Strasbourg" required>
+                <input [(ngModel)]="ville" name="ville" type="text" class="form-control" id="ville" name="ville" placeholder="Strasbourg" required>
             </div>
             <div class="form-group">
                 <label for="tel">Votre Téléphone</label>
-                <input type="tel" class="form-control" id="tel" name="tel" placeholder="0612345678" required>
+                <input [(ngModel)]="tel" name="tel" type="tel" class="form-control" id="tel" name="tel" placeholder="0612345678" required>
             </div>
             <div class="form-group">
                 <label for="email">Votre e-mail</label>
-                <input type="email" class="form-control" id="email" name="email" placeholder="monadresse@mail.com" required>
+                <input [(ngModel)]="email" name="email" type="email" class="form-control" id="email" name="email" placeholder="monadresse@mail.com" required>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Civilité</label>
-                <select class="form-control" id="exampleFormControlSelect1">
+                <select [(ngModel)]="civilite" name="civilite" class="form-control" id="exampleFormControlSelect1">
                   <option>Monsieur</option>
                   <option>Madame</option>
                 </select>
               </div>
             <div class="form-group">
                 <label for="login">Votre login</label>
-                <input type="text" class="form-control" id="login" name="login" placeholder="J.Dupont" required>
+                <input [(ngModel)]="login" name="login" type="text" class="form-control" id="login" name="login" placeholder="J.Dupont" required>
             </div>
             <div class="form-group">
                 <label for="password">Votre mot de passe</label>
-                <input type="password" class="form-control" id="mdp" name="mdp" placeholder="Mot de passe" required>
+                <input [(ngModel)]="password" name="mdp" type="password" class="form-control" id="mdp" name="mdp" placeholder="Mot de passe" required>
             </div>
             <div class="form-group">
                 <label for="password">Confirmez votre mot de passe</label>
-                <input type="password" class="form-control" id="mdp2" name="mdp2" oncopy="return false" onpaste="return false"
+                <input [(ngModel)]="password2" name="mdp2" type="password" class="form-control" id="mdp2" name="mdp2" oncopy="return false" onpaste="return false"
                     oncut="return false" placeholder="Confirmer votre mot de passe" required>
                 <div class="invalid-feedback">Mots de passe différents</div>
             </div>
@@ -54,8 +54,9 @@
             <div>
                 <button type="submit">Envoyer mon message </button>
             </div>
+           
         </form>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <app-composant-recap-data [nom]="nom" [prenom]="prenom" [adresse]="adresse" [codepostal]="codepostal" [mail]="email" [civilite]="civilite" [login]="login" [password]="password" [password2]="password2" [tel]="tel" [ville]="ville">
+    </app-composant-recap-data>
 </body>

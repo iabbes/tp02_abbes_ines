@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-composant-recap-data',
@@ -9,7 +9,19 @@ export class ComposantRecapDataComponent implements OnInit {
 
   constructor() { }
 
+  @Input() nom !: String;
+  @Input() prenom !: String;
+  @Input() adresse !: String;
+  @Input() codepostal !: Number;
+  @Input() ville !: String;
+  @Input() tel !: Number;
+  @Input() mail !: String;
+  @Input() civilite !: String;
+  @Input() login !: String;
+  @Input() password !: String;
+  @Input() password2 !: String;
+
+  @Output() change: EventEmitter<String> = new EventEmitter<String>();
   ngOnInit(): void {
   }
-
 }

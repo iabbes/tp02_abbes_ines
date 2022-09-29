@@ -7,6 +7,7 @@ import { ComposantTetiereComponent } from './composant-tetiere/composant-tetiere
 import { ComposantFooterComponent } from './composant-footer/composant-footer.component';
 import { ComposantFormulaireComponent } from './composant-formulaire/composant-formulaire.component';
 import { ComposantRecapDataComponent } from './composant-recap-data/composant-recap-data.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ComposantRecapDataComponent } from './composant-recap-data/composant-re
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
