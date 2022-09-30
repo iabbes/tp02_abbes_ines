@@ -22,6 +22,11 @@ export class ComposantRecapDataComponent implements OnInit {
   @Input() password2 !: String;
 
   @Output() change: EventEmitter<String> = new EventEmitter<String>();
+  
+  sendMessage(){
+    this.change.emit('Bonjour');
+  }
+
   ngOnInit(): void {
   }
 }
