@@ -3,11 +3,11 @@
         <form (ngSubmit)="onSubmitForm(form)"  #form="ngForm">
             <div class="form-group">
                 <label for="nom">Nom</label>
-                <input [(ngModel)]="nom" name="nom" type="text" class="form-control" id="nom" placeholder="Dupont" required>
+                <input appString [(ngModel)]="nom" name="nom" type="text" class="form-control" id="nom" placeholder="Dupont" required>
             </div>
             <div class="form-group">
                 <label for="prenom">Votre prénom</label>
-                <input [(ngModel)]="prenom" name="prenom" type="text" class="form-control" id="prenom" name="prenom" placeholder="Jean" required>
+                <input appString [(ngModel)]="prenom" name="prenom" type="text" class="form-control" id="prenom" name="prenom" placeholder="Jean" required>
             </div>
             <div class="form-group">
                 <label for="adresse">Votre adresse</label>
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label for="ville">Votre ville</label>
-                <input [(ngModel)]="ville" name="ville" type="text" class="form-control" id="ville" name="ville" placeholder="Strasbourg" required>
+                <input appString [(ngModel)]="ville" name="ville" type="text" class="form-control" id="ville" name="ville" placeholder="Strasbourg" required>
             </div>
             <div class="form-group">
                 <label for="tel">Votre Téléphone</label>
