@@ -8,6 +8,8 @@ import { ComposantFooterComponent } from './composant-footer/composant-footer.co
 import { ComposantFormulaireComponent } from './composant-formulaire/composant-formulaire.component';
 import { ComposantRecapDataComponent } from './composant-recap-data/composant-recap-data.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NumberDirective } from './number.directive';
+import { StringDirective } from './string.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ComposantTetiereComponent,
     ComposantFooterComponent,
     ComposantFormulaireComponent,
-    ComposantRecapDataComponent
+    ComposantRecapDataComponent,
+    NumberDirective,
+    StringDirective
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label for="codepostal">Votre code postal</label>
-                <input [(ngModel)]="codepostal" name="cp" type="text" class="form-control" id="codepostal" name="codepostal" placeholder="67000" maxlength="5" pattern="[0-9]+" required>
+                <input appNumber [(ngModel)]="codepostal" name="cp" type="text" class="form-control" id="codepostal" name="codepostal" placeholder="67000" maxlength="5" pattern="[0-9]+" required>
             </div>
             <div class="form-group">
                 <label for="ville">Votre ville</label>
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
                 <label for="tel">Votre Téléphone</label>
-                <input [(ngModel)]="tel" name="tel" type="tel" class="form-control" id="tel" name="tel" placeholder="0612345678" required>
+                <input appNumber [(ngModel)]="tel" name="tel" type="tel" class="form-control" id="tel" name="tel" placeholder="0612345678" required>
             </div>
             <div class="form-group">
                 <label for="email">Votre e-mail</label>
@@ -54,7 +54,6 @@
             <div>
                 <button type="submit">Envoyer mon message </button>
             </div>
-           
         </form>
     </div>
     <app-composant-recap-data [nom]="nom" [prenom]="prenom" [adresse]="adresse" [codepostal]="codepostal" [mail]="email" [civilite]="civilite" [login]="login" [password]="password" [password2]="password2" [tel]="tel" [ville]="ville">
