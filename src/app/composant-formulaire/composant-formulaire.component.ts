@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, NgForm } from '@angular/forms';
 import { Client } from '../../objets/client';
 @Component({
   selector: 'app-composant-formulaire',
@@ -24,8 +23,19 @@ export class ComposantFormulaireComponent implements OnInit {
   
   client !: Client; 
 
+  formIsValid : boolean = false;
+
+  verifierForm(){
+    console.log("verifierForm");
+    if(this.nom != undefined && this.prenom != undefined && this.adresse != undefined && this.codepostal != undefined && this.ville != undefined && this.tel != undefined && this.email != undefined && this.civilite != undefined && this.login != undefined && this.password != undefined && this.password2 != undefined){
+      this.formIsValid = false;
+    }
+    this.formIsValid = true;
+  }
+
 
   creerClientEtAfficher(){
+    this.verifierForm();
     this.client = new Client(this.nom, this.prenom, this.adresse, this.codepostal, this.ville, this.tel, this.email, this.civilite, this.login, this.password, this.password2);
   }
 

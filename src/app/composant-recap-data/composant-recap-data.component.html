@@ -1,15 +1,15 @@
 <div *ngIf="client">
-    Nom : {{client.nom}}
+    Nom : {{client.nom | firstCapitalLetter}}
     <br>
-    Prénom : {{client.prenom}}
+    Prénom : {{client.prenom | firstCapitalLetter}}
     <br>
     Adresse : {{client.adresse}}
     <br>
     Code postal : {{client.codepostal}}
     <br>
-    Ville : {{client.ville}}
+    Ville : {{client.ville | firstCapitalLetter}}
     <br>
-    Téléphone : {{client.tel}}
+    Téléphone : {{client.tel | phoneNumber}}
     <br>
     Mail : {{client.mail}}
     <br>
@@ -23,4 +23,4 @@
     <br>
 </div>
 
-<button (click)="desafficher()">Désafficher</button>
+<button (click)="desafficher()" >Désafficher</button>

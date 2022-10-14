@@ -10,6 +10,8 @@ import { ComposantRecapDataComponent } from './composant-recap-data/composant-re
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NumberDirective } from './number.directive';
 import { StringDirective } from './string.directive';
+import { PhoneNumberPipe } from './phone-number.pipe';
+import { FirstCapitalLetterPipe } from './first-capital-letter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { StringDirective } from './string.directive';
     ComposantFormulaireComponent,
     ComposantRecapDataComponent,
     NumberDirective,
-    StringDirective
+    StringDirective,
+    PhoneNumberPipe,
+    FirstCapitalLetterPipe
   ],
   imports: [
     BrowserModule,
