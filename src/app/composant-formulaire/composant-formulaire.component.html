@@ -1,6 +1,6 @@
 <body>
     <div class="formulaire col-md-6 mx-auto">
-        <form (ngSubmit)="onSubmitForm(form)"  #form="ngForm">
+        <form>
             <div class="form-group">
                 <label for="nom">Nom</label>
                 <input appString [(ngModel)]="nom" name="nom" type="text" class="form-control" id="nom" placeholder="Dupont" required>
@@ -52,10 +52,12 @@
             </div>
             <br>
             <div>
-                <button type="submit">Envoyer mon message </button>
+                <button (click)="creerClientEtAfficher()">Envoyer mon message </button>
             </div>
         </form>
     </div>
-    <app-composant-recap-data [nom]="nom" [prenom]="prenom" [adresse]="adresse" [codepostal]="codepostal" [mail]="email" [civilite]="civilite" [login]="login" [password]="password" [password2]="password2" [tel]="tel" [ville]="ville">
-    </app-composant-recap-data>
+    <div *ngIf="client">
+        <app-composant-recap-data [client] = "client" (desaffiche) = "desaffiche()"></app-composant-recap-data>
+    </div>
+    
 </body>
